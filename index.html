@@ -8,10 +8,45 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		
+		<style>
+			.appWhatsapp {
+				position: fixed;
+				left: 15px;
+				bottom: 20px;
+				width: 65px;
+				z-index: 1000;
+			}
+	
+			.appWhatsapp img{
+				width: 100%;
+				height: auto;
+			}
+		</style>
 	</head>
 	<body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+	FB.init({
+	  xfbml            : true,
+	  version          : 'v7.0'
+	});
+  };
 
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="108589204228182">
+</div>
 		<!-- Header -->
 			<header id="header" class="alt">
 				<div class="logo"><span class="badge badge-primary"><font color="black"><font size="5">Jugando y Aprendiendo</font> <span> </span></a></div>
@@ -22,7 +57,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Principal</a></li>
-					<li><a href="zona de descarga.html">Descarga</a></li>
+					<li><a href="https://www.mediafire.com/#myfiles">Beta</a></li>
 					<li><a href="Samsung.html">samsung</a></li>
 				</ul>
 			</nav>
@@ -30,7 +65,7 @@
 		<!-- Banner -->
 			<section class="banner full">
 				<article>
-					<img src="images/prueba6.jpg" alt="" />
+					<img src="images/banner.jpg" alt="" />
 					<div class="inner">
 						<header>
 							<h2><p></p><a href="https://templated.co"><font size="50">Jugando y Aprendiendo</font> </a></p></h2>
@@ -159,7 +194,7 @@
 					&copy; Todos los derechos reservados.
 				</div>
 			</footer>
-
+			<a class="appWhatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=573015262740&text=Bienvenidos!%20en%20que%20te%20podemos%20ayudar"><img src="images/whatsapp.png" hwight></a>	
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
